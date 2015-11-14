@@ -1,0 +1,25 @@
+﻿Сборка начата 12.11.2015 18:49:26.
+     1>Проект "D:\Универ\ИИП и игра\Besgt Gama Ever MB\Besgt Gama Ever MB\Besgt Gama Ever MB.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"D:\Универ\ИИП и игра\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /Od /D SFML_DYNAMIC /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(16): warning C4091: typedef : пропускается слева от "structImages", когда ни одна переменная не объявлена
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(76): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(93): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(96): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(100): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(103): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(107): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(110): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(114): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(117): warning C4305: аргумент: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(122): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(35): warning C4101: i: неиспользованная локальная переменная
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Универ\ИИП и игра\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.lib" /MACHINE:X64 x64\Debug\main.obj
+         Besgt Gama Ever MB.vcxproj -> D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.exe
+     1>Сборка проекта "D:\Универ\ИИП и игра\Besgt Gama Ever MB\Besgt Gama Ever MB\Besgt Gama Ever MB.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.93
