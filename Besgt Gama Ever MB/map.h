@@ -7,7 +7,7 @@ struct subject {
 	int Effect_type;
 	float Effect;
 	int Key;
-} keytab[quantity_subject] = { // 0 - золото 1 - влиянеие на HP 2 - влияние на % урона 3 - Влияние на % защиты
+} keytab[quantity_subject] = { // 0 - количество 1 - влиянеие на HP 2 - влияние на % урона 3 - Влияние на % защиты
 	"Пусто", 0, 0, 0,
 	"Аптечка", 1, 10, 1,
 	"Руна урона", 2, 0.1, 2,
