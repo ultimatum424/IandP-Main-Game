@@ -18,7 +18,7 @@ struct subject {
 };
 char TileMap[length_map]
 {
-	'e', 'c', 'c', 'c', 'c', 'c', 'c', 'e'
+	'e', 'a', '0', 'a', 'c', 'c', 'c', 'e'
 };
 struct box {
 	int key;

@@ -1,30 +1,59 @@
-﻿Сборка начата 14.12.2015 23:05:22.
+﻿Сборка начата 25.12.2015 21:43:10.
      1>Проект "D:\Универ\ИИП и игра\Besgt Gama Ever MB\Besgt Gama Ever MB\Besgt Gama Ever MB.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"D:\Универ\ИИП и игра\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /Od /D SFML_DYNAMIC /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt main.cpp
          main.cpp
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(185): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(196): warning C4305: -=: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(207): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(216): warning C4305: -=: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(227): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(228): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(229): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(230): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(234): warning C4305: +=: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(235): warning C4305: +=: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(236): warning C4305: +=: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\struct.h(237): warning C4305: +=: усечение из "double" к "float"
      1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\map.h(18): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
      1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\map.h(18): warning C4305: инициализация: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\view.h(15): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\view.h(19): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(63): warning C4305: =: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(64): warning C4305: =: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(73): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\view.h(16): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\view.h(20): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
      1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(74): warning C4305: =: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(78): warning C4305: =: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(79): warning C4305: =: усечение из "double" к "float"
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(123): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(126): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(127): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(161): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(162): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(142): warning C4101: i: неиспользованная локальная переменная
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(216): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(256): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(264): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(390): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(350): warning C4101: i: неиспользованная локальная переменная
-     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(393): warning C4101: event: неиспользованная локальная переменная
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(75): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(84): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(85): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(89): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(90): warning C4305: =: усечение из "double" к "float"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(139): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(226): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(229): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(230): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(271): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(272): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(254): warning C4101: i: неиспользованная локальная переменная
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(327): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(396): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(409): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(414): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(418): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(431): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(436): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(441): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(454): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(459): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(464): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(477): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(482): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(487): warning C4806: ==: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(533): warning C4305: =: усечение из "int" к "bool"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(534): warning C4305: =: усечение из "int" к "bool"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(535): warning C4305: =: усечение из "int" к "bool"
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(579): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(587): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(720): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(730): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
+     1>d:\универ\иип и игра\besgt gama ever mb\besgt gama ever mb\main.cpp(691): warning C4101: i: неиспользованная локальная переменная
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Универ\ИИП и игра\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.lib" /MACHINE:X64 x64\Debug\main.obj
          Besgt Gama Ever MB.vcxproj -> D:\Универ\ИИП и игра\Besgt Gama Ever MB\x64\Debug\Besgt Gama Ever MB.exe
@@ -32,4 +61,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.86
+Затраченное время: 00:00:01.25

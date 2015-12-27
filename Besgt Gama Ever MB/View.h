@@ -7,18 +7,22 @@ float x_view = 500;
 float y_view = 300;
 //объявили sfml объект "вид", который и является камерой#pragma once
 
-void ViewMove(float& time, Vector2f& f) //функция для считывания координат игрока
+void ViewMove(float& time, Vector2f& f, int stage_game) //функция для считывания координат игрока
 { 
+	if (stage_game == 1)
+	{
+		if ((Keyboard::isKeyPressed(Keyboard::Left) || (Keyboard::isKeyPressed(Keyboard::A))) & (f.x - 500 >= 0))
+		{
+			view.move(-0.05*time, 0);
+		}
+		if ((Keyboard::isKeyPressed(Keyboard::Right) || (Keyboard::isKeyPressed(Keyboard::D))) & (f.x + 500 < (length_map * 248)))
+		{
+			view.move(0.05*time, 0);
+		}
+	}
+		f = view.getCenter();
+		//std::cout << f.x << "=="  <<"\n";
 	
-	if ((Keyboard::isKeyPressed(Keyboard::Left) || (Keyboard::isKeyPressed(Keyboard::A))) & ( f.x - 500 >= 0))
-	{
-		view.move(-0.05*time, 0);
-	}
-	if ((Keyboard::isKeyPressed(Keyboard::Right) || (Keyboard::isKeyPressed(Keyboard::D))) & (f.x + 500 < (length_map * 248)))
-	{
-		view.move(0.05*time, 0);
-	}
-	f = view.getCenter();
 	/*if ((x > 50) & (y == 85)) 
 	{
 	if (x > (x_view - 450))
