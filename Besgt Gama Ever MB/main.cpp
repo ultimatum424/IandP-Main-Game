@@ -69,25 +69,25 @@ void InitHeroes(StructLoad& load, StructAllHeroes& all_heroes)
 	loadImage(load.load_image_ability_mage, "../images/mage/icon_mage.png");
 	all_heroes.mage.image_ability = load.load_image_ability_mage.sprite;
 
-	all_heroes.cruasder.hp = 37;
+	all_heroes.cruasder.hp = 60;
 	all_heroes.cruasder.max_hp = 60;
-	all_heroes.cruasder.damage = 1.65;
-	all_heroes.cruasder.def = 1.13;
+	all_heroes.cruasder.damage = 0.5;
+	all_heroes.cruasder.def = 1;
 
 	all_heroes.rogue.hp = 25;
 	all_heroes.rogue.max_hp = 25;
-	all_heroes.rogue.damage = 2;
+	all_heroes.rogue.damage = 1;
 	all_heroes.rogue.def = 0.5;
 
 	all_heroes.wizard.hp = 30;
 	all_heroes.wizard.max_hp = 30;
-	all_heroes.wizard.damage = 1.65;
-	all_heroes.wizard.def = 1.13;
+	all_heroes.wizard.damage = 0.5;
+	all_heroes.wizard.def = 0.5;
 
 	all_heroes.mage.hp = 35;
 	all_heroes.mage.max_hp = 35;
-	all_heroes.mage.damage = 1.65;
-	all_heroes.mage.def = 1.13;
+	all_heroes.mage.damage = 0.5;
+	all_heroes.mage.def = 0.5;
 }
 void InitAnimation(StructAllHeroes& all_heroes)
 {
@@ -406,16 +406,16 @@ void AttackModeCrusader(AttacksCruasder& attack_cruasder, StructAllHeroes& all_h
 		flaq.key_attack = 0;
 		attack_cruasder.Attack1(all_heroes.cruasder, enemy[1]);
 	}
-	if (flaq.key_attack == 2)
+	else if (flaq.key_attack == 2)
 	{
 		attack_cruasder.Attack2(all_heroes.cruasder);
 		flaq.key_attack = 0;
 	}
-	if (flaq.key_attack == 3) {
+	else if (flaq.key_attack == 3) {
 		flaq.key_attack = 0;
 		attack_cruasder.Attack3(all_heroes.cruasder);
 	}
-	if (flaq.key_attack == 4)
+	else if (flaq.key_attack == 4)
 	{
 		attack_cruasder.Attack4(all_heroes.cruasder, enemy[1]);
 		flaq.key_attack = 0;
@@ -428,17 +428,17 @@ void AttackModeRogue(AttacksRogue& attack_rouge, StructAllHeroes& all_heroes, St
 		flaq.key_attack = 0;
 		attack_rouge.Attack1(all_heroes.rogue, enemy[1]);
 	}
-	if (flaq.key_attack == 2)
+	else if (flaq.key_attack == 2)
 	{
 		flaq.key_attack = 0;
 		attack_rouge.Attack2(all_heroes.rogue);
 	}
-	if (flaq.key_attack == 3)
+	else if (flaq.key_attack == 3)
 	{
 		flaq.key_attack = 0;
 		attack_rouge.Attack3(enemy[1], enemy[2], enemy[3]);
 	}
-	if (flaq.key_attack == 4)
+	else if (flaq.key_attack == 4)
 	{
 		flaq.key_attack = 0;
 		attack_rouge.Attack4(all_heroes.rogue, enemy[2]);
@@ -451,17 +451,17 @@ void AttackModeWizard(AttacksWizard& attack_wizard, StructAllHeroes& all_heroes,
 		flaq.key_attack = 0;
 		attack_wizard.Attack1(enemy[3]);
 	}
-	if (flaq.key_attack == 2)
+	else if (flaq.key_attack == 2)
 	{
 		flaq.key_attack = 0;
 		attack_wizard.Attack2(all_heroes);
 	}
-	if (flaq.key_attack == 3)
+	else if (flaq.key_attack == 3)
 	{
 		flaq.key_attack = 0;
 		attack_wizard.Attack3(all_heroes);
 	}
-	if (flaq.key_attack == 4)
+	else if (flaq.key_attack == 4)
 	{
 		flaq.key_attack = 0;
 		attack_wizard.Attack4(enemy[2]);
@@ -474,17 +474,17 @@ void AttackModeMage(AttacksMage& attack_mage, StructAllHeroes& all_heroes, int& 
 		flaq.key_attack = 0;
 		attack_mage.Attack1(all_heroes);
 	}
-	if (flaq.key_attack == 2)
+	else if (flaq.key_attack == 2)
 	{
 		flaq.key_attack = 0;
 		attack_mage.Attack2(all_heroes);
 	}
-	if (flaq.key_attack == 3)
+	else if (flaq.key_attack == 3)
 	{
 		flaq.key_attack = 0;
 		attack_mage.Attack3(all_heroes);
 	}
-	if (flaq.key_attack == 4)
+	else if (flaq.key_attack == 4)
 	{
 		flaq.key_attack = 0;
 		attack_mage.Attack4(all_heroes);
@@ -492,33 +492,65 @@ void AttackModeMage(AttacksMage& attack_mage, StructAllHeroes& all_heroes, int& 
 }
 void AttackModeEnemy(StructAllHeroes& all_heroes, StructEnemy enemy[4], int& jump_step)
 {
-
+	for (int i = 1; i <= 3; i++)
+	{
+		int damage;
+		int heroes_victim = rand() % 4 + 1;
+		int amount_damage = rand() % 7 + 1;
+		std::cout << heroes_victim << '-' << amount_damage << "\n";
+		if (heroes_victim == 1)
+		{
+			damage = amount_damage / all_heroes.cruasder.def;
+			if (all_heroes.cruasder.hp >= damage) all_heroes.cruasder.hp -= damage;
+			else all_heroes.cruasder.hp = 0;
+		}
+		if (heroes_victim == 2)
+		{
+			damage = amount_damage / all_heroes.rogue.def;
+			if (all_heroes.rogue.hp >= damage) all_heroes.rogue.hp -= damage;
+			else all_heroes.rogue.hp = 0;
+		}
+		if (heroes_victim == 3)
+		{
+			damage = amount_damage / all_heroes.wizard.def;
+			if (all_heroes.wizard.hp >= damage) all_heroes.wizard.hp -= damage;
+			else all_heroes.wizard.hp = 0;
+		}
+		if (heroes_victim == 4)
+		{
+			damage = amount_damage / all_heroes.mage.def;
+			if (all_heroes.mage.hp >= damage) all_heroes.mage.hp -= damage;
+			else all_heroes.mage.hp = 0;
+		}
+	}
+	jump_step++;
 }
 void Attack(StructAllHeroes& all_heroes, StructEnemy enemy[4], int& jump_step)
 {
 	float zoom_heroes = 2.5;
 	float zoom_enemy = 3;
-	all_heroes.cruasder.batle_sprite.setTextureRect(IntRect(all_heroes.cruasder.action1.pos_x, all_heroes.cruasder.action1.pos_y, all_heroes.cruasder.action1.size_x, all_heroes.cruasder.action1.size_y));
-	all_heroes.rogue.batle_sprite.setTextureRect(IntRect(all_heroes.rogue.action1.pos_x, all_heroes.rogue.action1.pos_y, all_heroes.rogue.action1.size_x, all_heroes.rogue.action1.size_y));
-	all_heroes.wizard.batle_sprite.setTextureRect(IntRect(all_heroes.wizard.action1.pos_x, all_heroes.wizard.action1.pos_y, all_heroes.wizard.action1.size_x, all_heroes.wizard.action1.size_y));
-	all_heroes.mage.batle_sprite.setTextureRect(IntRect(all_heroes.mage.action1.pos_x, all_heroes.mage.action1.pos_y, all_heroes.mage.action1.size_x, all_heroes.mage.action1.size_y));
+	//all_heroes.cruasder.batle_sprite.setTextureRect(IntRect(all_heroes.cruasder.action1.pos_x, all_heroes.cruasder.action1.pos_y, all_heroes.cruasder.action1.size_x, all_heroes.cruasder.action1.size_y));
+	//all_heroes.rogue.batle_sprite.setTextureRect(IntRect(all_heroes.rogue.action1.pos_x, all_heroes.rogue.action1.pos_y, all_heroes.rogue.action1.size_x, all_heroes.rogue.action1.size_y));
+	//all_heroes.wizard.batle_sprite.setTextureRect(IntRect(all_heroes.wizard.action1.pos_x, all_heroes.wizard.action1.pos_y, all_heroes.wizard.action1.size_x, all_heroes.wizard.action1.size_y));
+	//all_heroes.mage.batle_sprite.setTextureRect(IntRect(all_heroes.mage.action1.pos_x, all_heroes.mage.action1.pos_y, all_heroes.mage.action1.size_x, all_heroes.mage.action1.size_y));
 	all_heroes.cruasder.batle_sprite.setScale(zoom_heroes, zoom_heroes);
 	all_heroes.rogue.batle_sprite.setScale(zoom_heroes, zoom_heroes);
 	all_heroes.wizard.batle_sprite.setScale(zoom_heroes, zoom_heroes);
 	all_heroes.mage.batle_sprite.setScale(zoom_heroes, zoom_heroes);
 	for (int i = 1; i <= 4; i++)
 	{
-		enemy[i].sprite.setTextureRect(IntRect(enemy[i].pos_x, enemy[i].pos_y, enemy[i].size_x, enemy[i].size_y));
+		//enemy[i].sprite.setTextureRect(IntRect(enemy[i].pos_x, enemy[i].pos_y, enemy[i].size_x, enemy[i].size_y));
 		enemy[i].sprite.setScale(zoom_enemy, zoom_enemy);
 	}
 }
-void WindowPolEvent(RenderWindow& window, Event& event, int stage_game, StructFlaq& flaq)
+void WindowPolEvent(RenderWindow& window, int stage_game, StructFlaq& flaq)
 {
-	flaq = { 0 };
+	Event event;
 	//std::cout << flaq.cheat;
-	//flaq.cheat = 0;
-	//flaq.mous_inventory = 0;
-	//flaq.r_alt = 0;
+	flaq.cheat = 0;
+	flaq.mous_inventory = 0;
+	flaq.r_alt = 0;
+	flaq.key_attack = 0;
 	while (window.pollEvent(event))
 	{
 		if (stage_game == 1)
@@ -529,11 +561,14 @@ void WindowPolEvent(RenderWindow& window, Event& event, int stage_game, StructFl
 		if (stage_game == 2)
 		{
 			if ((Keyboard::isKeyPressed(Keyboard::RAlt)) && (jump_step <= 4)) flaq.r_alt = 1;
-			if (Keyboard::isKeyPressed(Keyboard::Num1)) flaq.key_attack = 1;
-			if (Keyboard::isKeyPressed(Keyboard::Num2)) flaq.key_attack = 2;
-			if (Keyboard::isKeyPressed(Keyboard::Num3)) flaq.key_attack = 3;
-			if (Keyboard::isKeyPressed(Keyboard::Num4)) flaq.key_attack = 4;
+			else if (Keyboard::isKeyPressed(Keyboard::Z)) flaq.key_attack = 1;
+			else if (Keyboard::isKeyPressed(Keyboard::X)) {
+				flaq.key_attack = 2; 		std::cout << flaq.key_attack << "\n";;
+			}
+			else if (Keyboard::isKeyPressed(Keyboard::C)) flaq.key_attack = 3;
+			else if (Keyboard::isKeyPressed(Keyboard::V)) flaq.key_attack = 4;
 		}
+
 		if (event.type == sf::Event::Closed)
 			window.close();
 	}
@@ -546,26 +581,28 @@ void DrawBattle(RenderWindow& window, StructAllHeroes& all_heroes, StructEnemy e
 	HpInfo(all_heroes.rogue, f, 2, window);
 	HpInfo(all_heroes.wizard, f, 3, window);
 	HpInfo(all_heroes.mage, f, 4, window);
-	
-	window.draw(all_heroes.cruasder.batle_sprite);
-	window.draw(all_heroes.rogue.batle_sprite);
-	window.draw(all_heroes.wizard.batle_sprite);
-	window.draw(all_heroes.mage.batle_sprite);
-
 	if (jump_step == 1) window.draw(all_heroes.cruasder.image_ability);
 	if (jump_step == 2) window.draw(all_heroes.rogue.image_ability);
 	if (jump_step == 3) window.draw(all_heroes.wizard.image_ability);
 	if (jump_step == 4) window.draw(all_heroes.mage.image_ability);
+	
+	if ((timer <= 2) || (jump_step == 0)) window.draw(battle_image.blackout);
 	for (int i = 1; i <= 4; i++)
 	{
 		window.draw(enemy[i].sprite);
 		window.draw(enemy[i].sq);
 	}
-	if ((timer <= 5) || (jump_step == 0)) window.draw(battle_image.blackout);
+	window.draw(all_heroes.cruasder.batle_sprite);
+	window.draw(all_heroes.rogue.batle_sprite);
+	window.draw(all_heroes.wizard.batle_sprite);
+	window.draw(all_heroes.mage.batle_sprite);
+
+	
+	
 }
-void ExplorationMod(RenderWindow& window, StructAllHeroes& all_heroes, StructTime& time_game, Vector2f& f, int& stage_game, Event& event)
+void ExplorationMod(RenderWindow& window, StructAllHeroes& all_heroes, StructTime& time_game, Vector2f& f, int& stage_game, StructFlaq& flaq)
 {
-	WindowPolEvent(window, event, stage_game, flaq);
+	WindowPolEvent(window, stage_game, flaq);
 	if (flaq.cheat == 1)
 	{
 		openChest(all_heroes.rogue.sprite, game_image.map, items.sprite, inventory);
@@ -660,25 +697,32 @@ void ExplorationMod(RenderWindow& window, StructAllHeroes& all_heroes, StructTim
 	//window.draw(items.sprite);
 }
 
-void BattleMod(RenderWindow& window, StructAllHeroes& all_heroes, StructEnemy enemy[4], StructTime& time_game, Vector2f& f, int& jump_step, Event& event, int& stage_game, StructFlaq& flaq)
+void BattleMod(RenderWindow& window, StructAllHeroes& all_heroes, StructEnemy enemy[4], StructTime& time_game, Vector2f& f, int& jump_step, int& stage_game, StructFlaq& flaq)
 {
 	float timer = time_game.clock2.getElapsedTime().asSeconds();
 	//sf::Event event;	
 	if (jump_step == 0)  time_game.clock2.restart();
-	if ((timer >- 10) && (jump_step == 0)) jump_step++;
-	WindowPolEvent(window, event, stage_game, flaq);
+	if ((timer > 2) && (jump_step == 0)) jump_step++;
+	if (Keyboard::isKeyPressed(Keyboard::O)) system("pause");
+	WindowPolEvent(window, stage_game, flaq);
 	if (jump_step == 1) AttackModeCrusader(attack_cruasder, all_heroes, enemy, jump_step, flaq);
-	if (jump_step == 2) AttackModeRogue(attack_rouge, all_heroes, enemy, jump_step, flaq);
-	if (jump_step == 3) AttackModeWizard(attack_wizard, all_heroes, enemy, jump_step, flaq);
-	if (jump_step == 4) AttackModeMage(attack_mage, all_heroes, jump_step, flaq);
-	if (jump_step == 5) AttackModeEnemy(all_heroes, enemy, jump_step);
-	if (jump_step == 6) time_game.clock2.restart();
-	if ((flaq.r_alt) && (jump_step <= 4)) jump_step++;
-	std::cout << timer << "\n";
+	else if (jump_step == 2) AttackModeRogue(attack_rouge, all_heroes, enemy, jump_step, flaq);
+	else if (jump_step == 3) AttackModeWizard(attack_wizard, all_heroes, enemy, jump_step, flaq);
+	else if (jump_step == 4) AttackModeMage(attack_mage, all_heroes, jump_step, flaq);
+	else if (jump_step == 5) AttackModeEnemy(all_heroes, enemy, jump_step);
+	if (jump_step == 6)
+	{
+		std::cout << "!!!!!!!!!!!!!!!!!!!";
+		jump_step = 0;
+	}
+	//if ((flaq.r_alt) && (jump_step <= 4)) jump_step++;
+	if ((flaq.key_attack == 0) && (flaq.r_alt)) jump_step++;
+	std::cout << jump_step << "\n";
 	SetImageBattle(all_heroes, battle_image, f);
 	SetLocalEnemy(enemy, f);
-	//if (timer <= 5) Attack(all_heroes, enemy, jump_step);
+	if (timer < 2) Attack(all_heroes, enemy, jump_step);
 	DrawBattle(window, all_heroes, enemy, f, timer, jump_step);
+	
 	//DrawInventory(items, f, window);
 	//window.draw(all_heroes.wizard.batle_sprite);
 }
@@ -731,11 +775,11 @@ int main()
 		time_game.clock.restart(); //перезагружает время
 		time_game.time = time_game.time / 1000; //скорость игры
 		time_game.flaq_time2 = 0;
-		sf::Event event;
+		//sf::Event event;
 		window.setView(view);
 		ViewMove(time_game.time, f, stage_game);
-		if (stage_game == 1) ExplorationMod(window, all_heroes, time_game, f, stage_game, event);
-		if (stage_game == 2) BattleMod(window, all_heroes, local_enemy[0].enemy,  time_game, f,jump_step, event, stage_game, flaq);
+		if (stage_game == 1) ExplorationMod(window, all_heroes, time_game, f, stage_game,  flaq);
+		if (stage_game == 2) BattleMod(window, all_heroes, local_enemy[0].enemy,  time_game, f,jump_step,  stage_game, flaq);
 		/*while (window.pollEvent(event))
 		{
 			if (Keyboard::isKeyPressed(Keyboard::Num9)) stage_game = 1;
